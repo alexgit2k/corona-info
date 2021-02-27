@@ -30,11 +30,11 @@ Windows: ![corona-info.zip](https://github.com/alexgit2k/corona-info/releases/la
 ## Einbindungen von Dritten
 Icon von Everaldo: https://iconarchive.com/show/crystal-clear-icons-by-everaldo/App-virus-detected-icon.html
 
-## Quellen
-COVID-19 Fallzahlen Deutschland von Jan-Philip Gehrcke: https://github.com/jgehrcke/covid-19-germany-gae/
+## Daten-Quellen
+COVID-19 Fallzahlen Deutschland von Jan-Philip Gehrcke: https://github.com/jgehrcke/covid-19-germany-gae/ \
 Open Data Österreich: https://www.data.gv.at/katalog/dataset/2f6649b6-2b2d-49a9-ab31-6c7e43728001
 
-## Lizenz und Copyright
-Diese Software unterliegt dem Copyright von alexgit2k.
+## Lizenz und Urheberrecht
+Diese Software unterliegt dem Urheberrecht von alexgit2k.
 
 Freie Software, lizenziert unter der MIT-Lizenz. 
