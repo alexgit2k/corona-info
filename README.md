@@ -28,6 +28,7 @@ Beispiel config.csv:
 Windows: ![corona-info.zip](https://github.com/alexgit2k/corona-info/releases/latest/download/corona-info.zip)
 
 ## Einbindungen von Dritten
+Split-Routine von wilbert: https://www.purebasic.fr/english/viewtopic.php?p=486360#p486360 \
 Icon von Everaldo: https://iconarchive.com/show/crystal-clear-icons-by-everaldo/App-virus-detected-icon.html
 
 ## Daten-Quellen

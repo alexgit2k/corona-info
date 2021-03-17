@@ -47,6 +47,7 @@ Declare ReadConfig(filename.s)
 ; Low-Level-Procedures
 Declare text2array(input.s, Array output.s(1))
 Declare column2index(line.s, delimiter.s, Map columns())
+Declare split(String.s, Array StringArray.s(1), Separator.s = " ")
 
 ; --------------------------------------------------------------------------------------------------------------
 
@@ -233,11 +234,13 @@ Procedure text2array(input.s, Array output.s(1))
 
   ; Split
   Debug Str(CountString(input,eol)+1) + " lines found."
+  split(input, output(), eol)
+  ; Unshift
   ReDim output(CountString(input,eol)+1)
-  For i=1 To CountString(input,eol)+1
-    ;Debug "- " + StringField(input, i, eol)
-    output(i) = StringField(input, i, eol)
+  For i=CountString(input,eol) To 0 Step -1
+    output(i+1) = output(i)
   Next
+  output(0) = ""
 
   ; Last line empty
   If output(ArraySize(output())) = ""
@@ -255,6 +258,26 @@ Procedure column2index(line.s, delimiter.s, Map columns())
     key = StringField(line, i, delimiter)
     columns(key) = i
   Next
+EndProcedure
+
+; wilbert: https://www.purebasic.fr/english/viewtopic.php?p=486360#p486360
+Procedure split(String.s, Array StringArray.s(1), Separator.s = " ")
+  Protected S.String, *S.Integer = @S
+  Protected.i asize, i, p, slen
+  asize = CountString(String, Separator)
+  slen = Len(Separator)
+  ReDim StringArray(asize)
+
+  *S\i = @String
+  While i < asize
+    p = FindString(S\s, Separator)
+    StringArray(i) = PeekS(*S\i, p - 1)
+    ; Debug "- " + StringArray(i)
+    *S\i + (p + slen - 1) << #PB_Compiler_Unicode
+    i + 1
+  Wend
+  StringArray(i) = S\s
+  *S\i = 0
 EndProcedure
 
 ; IDE Options = PureBasic 5.73 LTS (Windows - x86)
