@@ -1,6 +1,6 @@
-#Land,Ort
-DE,Berlin
-DE,SK Hamburg
-DE,SK München
-AT,Wien
-AT,Salzburg(Stadt)
+#Land,Ort,AGS/GKZ
+DE,Berlin,11000
+DE,SK Hamburg,2000
+DE,SK München,9162
+AT,Wien,900
+AT,Salzburg(Stadt),501

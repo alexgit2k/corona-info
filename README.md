@@ -1,14 +1,15 @@
 # Corona-Info
 
-Anzeige der 7-Tage-Inzidenzen für Landkreise / Bezirke von Deutschland und Österreich.
+Anzeige der 7-Tage-Inzidenzen für Landkreise / Bezirke von Deutschland und Österreich. \
+Mit einem Doppelklick auf den Landkreis / Bezirk wird der Verlauf der letzten 14 Tage angezeigt.
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.png) ![Screenshot Graph](screenshot-graph.png)
 
 ## Konfiguration
 
 In der Datei `config.csv` können bis zu 6 Landkreise / Bezirke in jeweils einer Zeile eingetragen werden.
-Zuerst mit dem Länderkürzel `DE` oder `AT` gefolgt von einem Komma `,`und anschließend dem Namen des Landkreises
-/ Bezirkes aus den folgenden Listen:
+Zuerst mit dem Länderkürzel `DE` oder `AT`, dem Namen des Landkreises / Bezirkes und dem Amtlichen Gemeindeschlüssel
+(AGS) / Gemeindekennziffer (GKZ) aus den folgenden Listen:
 - Deutschland: https://raw.githubusercontent.com/jgehrcke/covid-19-germany-gae/master/more-data/latest-aggregate.csv
   - `SK` und `LK` bei einem Eintrag muss mit übernommen werden.
   - `Berlin` umfasst ganz Berlin, die einzelnen Bezirke sind nach dem Schema `SK Berlin ...` benannt.
@@ -17,17 +18,18 @@ Zuerst mit dem Länderkürzel `DE` oder `AT` gefolgt von einem Komma `,`und ansc
 
 Beispiel config.csv:
 
-    #Land,Ort
-    DE,Berlin
-    DE,SK Hamburg
-    DE,SK München
-    AT,Wien
-    AT,Salzburg(Stadt)
+    #Land,Ort,AGS/GKZ
+    DE,Berlin,11000
+    DE,SK Hamburg,2000
+    DE,SK München,9162
+    AT,Wien,900
+    AT,Salzburg(Stadt),501
 
 ## Download
 Windows: ![corona-info.zip](https://github.com/alexgit2k/corona-info/releases/latest/download/corona-info.zip)
 
 ## Einbindungen von Dritten
+DrawSimpleGraph von Luna Sole: https://www.purebasic.fr/english/viewtopic.php?f=12&t=67464 \
 Split-Routine von wilbert: https://www.purebasic.fr/english/viewtopic.php?p=486360#p486360 \
 Icon von Everaldo: https://iconarchive.com/show/crystal-clear-icons-by-everaldo/App-virus-detected-icon.html
 
